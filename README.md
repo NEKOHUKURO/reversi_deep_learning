@@ -1,0 +1,2 @@
+# reversi_deep_learning
+リバーシAIを作成するためのコード
