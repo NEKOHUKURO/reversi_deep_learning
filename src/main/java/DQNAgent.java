@@ -43,7 +43,7 @@ public class DQNAgent {
 //        this.qnetTarget.model = ComputationGraph.load(new File("aa.txt"), true);
     }
 
-    public int getAction(INDArray input, double epsilon, OSERO osero, int putter) {
+    public int getAction(INDArray input, double epsilon, OSERO osero, int putter) throws Exception {
         if(random.nextDouble() < epsilon) {
             ArrayList<Integer> array = new ArrayList<Integer>();
             for (int i=0;i<8*8;i++) {
@@ -61,32 +61,53 @@ public class DQNAgent {
             }
         } else {
             if(putter==1){
-                INDArray out = qnet.model.output(input);
-                double[] minArray = out.toDoubleVector();
-                double min = out.min(1).toDoubleVector()[0];
+                int maxX=-1;
+                int maxY=-1;
+                double maxQ = Double.MIN_EXPONENT;
                 for (int action = 0; action < 64; action++) {
                     int x = 7 - action%8;
                     int y = action/8;
-                    if (!osero.can_put(putter, y, x)) {
-                        minArray[action] = min - 1;
+                    Env env1 = new Env();
+                    if (osero.can_put(putter, y, 7-x)) {
+                        for (int i = 0; i < 64; i++) {
+                            env1.osero.bord_0[i/8][i%8] = osero.bord_1[i/8][7 - i%8];
+                            env1.osero.bord_1[i/8][i%8] = osero.bord_0[i/8][7 - i%8];
+                        }
+
+                        env1.osero.bord_put(0, y, x);
+                        double q = this.qnet.model.output(env1.getMaxBord(0)).toDoubleVector()[0];
+                        if(maxQ < q) {
+                            maxQ = q;
+                            maxY = y;
+                            maxX = x;
+                        }
                     }
                 }
                 //System.out.println(Nd4j.create(minArray, new int[]{1, 64}));
-                int newAction = Nd4j.create(minArray, new int[]{1, 64}).argMax(1).toIntVector()[0];
-                return (newAction/8)*8 + (7 - (newAction%8));
+                return maxY*8 + (7-maxX);
             } else {
-                INDArray out = qnet.model.output(input);
-                double[] minArray = out.toDoubleVector();
-                double min = out.min(1).toDoubleVector()[0];
+                int maxX=-1;
+                int maxY=-1;
+                double maxQ = Double.MIN_EXPONENT;
                 for (int action = 0; action < 64; action++) {
                     int x = action % 8;
                     int y = action / 8;
-                    if (!osero.can_put(putter, y, x)) {
-                        minArray[action] = min - 1;
+                    if (osero.can_put(putter, y, x)) {
+                        Env env1 = new Env();
+                        for (int i = 0; i < 64; i++) {
+                            env1.osero.bord_0[i/8][i%8] = osero.bord_0[i/8][i%8];
+                            env1.osero.bord_1[i/8][i%8] = osero.bord_1[i/8][i%8];
+                        }
+                        env1.osero.bord_put(putter, y, x);
+                        double q = this.qnet.model.output(env1.getMaxBord(0)).toDoubleVector()[0];
+                        if(maxQ < q) {
+                            maxQ = q;
+                            maxY = y;
+                            maxX = x;
+                        }
                     }
                 }
-                //System.out.println(Nd4j.create(minArray, new int[]{1, 64}));
-                return Nd4j.create(minArray, new int[]{1, 64}).argMax(1).toIntVector()[0];
+                return maxY*8 + maxX;
             }
         }
     }
@@ -96,35 +117,35 @@ public class DQNAgent {
         if (replayBuffer.size() < this.batchSize) return;
         syncQnet();
 
-        INDArray input = Nd4j.zeros(this.batchSize, this.qnet.input);
-        INDArray labels = Nd4j.zeros(this.batchSize, this.qnet.outputNum);
         ArrayList<Memory> memories = replayBuffer.getBatch();
-
+        int size = this.batchSize;
         for(int index =0; index<this.batchSize; index++) {
             Memory it = memories.get(index);
-            double end = 0.0;
-            if(it.done)end = 1.0;
-            INDArray outOfQnet = this.qnet.model.output(it.state);
+            if (it.done)size++;
+        }
+
+        INDArray input = Nd4j.zeros(size, this.qnet.input);
+        INDArray labels = Nd4j.zeros(size, this.qnet.outputNum);
+
+        int address = 0;
+        for(int index =0; index<this.batchSize; index++) {
+            Memory it = memories.get(index);
+            //double end = 0.0;
+            //if(it.done)end = 1.0;
+            //INDArray outOfQnet = this.qnet.model.output(it.state);
             INDArray outOfQTarget = this.qnetTarget.output(it.nextState);
-            double min = outOfQTarget.min(1).toDoubleVector()[0] -1;
 
-            INDArray put = Nd4j.ones(outOfQTarget.shape()).subi(it.mask);
-            outOfQTarget = outOfQTarget.mul(put);
-            outOfQTarget = outOfQTarget.add(it.mask.mul(min));
+            double[] newOut = new double[]{this.gamma * outOfQTarget.toDoubleVector()[0]};
+            INDArray newOfQnet = Nd4j.create(newOut, new int[]{1,1});
 
-            double[] newOut = outOfQnet.toDoubleVector();
-            newOut[it.action] = (1.0-end) * this.gamma * outOfQTarget.max(1).toDoubleVector()[0] + it.reward;
-            INDArray newOfQnet = Nd4j.create(newOut, new int[]{1,this.qnet.outputNum});
-            //System.out.println(it.mask.shape());
-            //System.out.println(it.mask);
-            /*
-            newOfQnet = newOfQnet.mul(put);
-            newOfQnet = newOfQnet.add(it.mask.mul(-10.0));
-            //System.out.println(newOfQnet);
-            */
-
-            input.putRow(index, it.state);
-            labels.putRow(index, newOfQnet);
+            input.putRow(address, it.state);
+            labels.putRow(address, newOfQnet);
+            address++;
+            if (it.done){
+                input.putRow(address, it.nextState);
+                labels.putRow(address, Nd4j.create(new double[]{it.reward}, new int[]{1,1}));
+                address++;
+            }
         }
         double time = 0.000005;
         qnet.model.initGradientsView();

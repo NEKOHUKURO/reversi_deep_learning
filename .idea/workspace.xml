@@ -5,8 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2c86933-f64d-4570-8876-2a52a7868223" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osero.dl4j" beforeDir="false" afterPath="$PROJECT_DIR$/osero.dl4j" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/DQNAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/DQNAgent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/PlayWithYou.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/PlayWithYou.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/QNet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/QNet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/DQNAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/Env.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/Memory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/OSERO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/PlayWithYou.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/QNet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/ReplayBuffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DQNAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DQNAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PlayWithYou.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PlayWithYou.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QNet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +37,32 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/src">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="reversi_deep_learning" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -31,19 +74,28 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main (1).executor": "Run",
     "Application.Main.executor": "Run",
+    "Gradle.Build src.executor": "Run",
     "Gradle.reversi_deep_learning [:Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "establishe__borad",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/oicat/ribasi",
-    "project.structure.last.edited": "SDKs",
+    "last_opened_file_path": "/home/oicat/reversi_deep_learning/src",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.53103447",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="org.example.reversi_deep_learning.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="reversi_deep_learning.main" />
@@ -53,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

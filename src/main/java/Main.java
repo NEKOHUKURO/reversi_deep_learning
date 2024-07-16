@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) throws Exception{
-        int episodes = 1000000;
+        int episodes = 500000;
         Env env = new Env();
         DQNAgent agent = new DQNAgent(true);
         boolean done;
@@ -44,8 +44,20 @@ public class Main {
 
                 a = ddd>30? 1.0/30: randMap[ddd] ? 1:-1;
                 if(putAble) action = agent.getAction(state, a, env.osero, 0);
+                Env env1 = new Env();
+                for (int i = 0; i < 64; i++) {
+                    env1.osero.bord_0[i/8][i%8] = env.osero.bord_0[i/8][i%8];
+                    env1.osero.bord_1[i/8][i%8] = env.osero.bord_1[i/8][i%8];
+                }
+                env1.osero.bord_put(0, action/8, action%8);
+
                 //env.osero.showBoard(0);
                 //System.out.println("action : "+act + " x:"+act%8 +" y:"+act/8);
+                for (int i=0;i<64;i++){
+                    if(env.osero.can_put(0,i/8, i%8)) {
+                        putAble = true;
+                    }
+                }
 
                 Memory arr = env.step(action, false, agent);
                 INDArray next_state = arr.state;
@@ -58,7 +70,7 @@ public class Main {
                         mask[i] = 1;
                     }
                 }
-                agent.update(state, action, reward, next_state, done, Nd4j.create(mask, new int[]{1, 64}));
+                agent.update(env1.getMaxBord(0), action, reward, next_state, done, Nd4j.create(mask, new int[]{1, 64}));
                 //state = next_state;
             }
             System.out.println("a is : "+ a);

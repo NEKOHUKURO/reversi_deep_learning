@@ -43,10 +43,6 @@ public class PlayWithYou {
                         action = agent.getAction(e, 10, env.osero, 0);
                     }
                 }
-                INDArray oo = agent.qnet.model.output(e);
-                System.out.println(oo);
-                System.out.println(oo.argMax(1));
-               // env.osero.showBoard(0);
                 //env.osero.showBoard(0);
                 //System.out.println("action : "+act + " x:"+act%8 +" y:"+act/8);
 

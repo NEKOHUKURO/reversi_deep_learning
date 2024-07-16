@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class QNet{
     final int input = 8*8*2;
-    int outputNum = 8*8; // number of output classes
+    int outputNum = 1; // number of output classes
     int batchSize = 128; // batch size for each epoch
     int rngSeed = 123; // random number seed for reproducibility
     int numEpochs = 15; // number of epochs to perform
@@ -119,8 +119,8 @@ public class QNet{
                 .layer(new DenseLayer.Builder()
                         .updater(new Adam())
                         .activation(Activation.IDENTITY)
-                        .nIn(64)
-                        .nOut(outputNum)
+                        .nIn(8*8*2)
+                        .nOut(1)
                         .build())
                 .build();
         /*
