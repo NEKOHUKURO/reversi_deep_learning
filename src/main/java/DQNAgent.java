@@ -112,8 +112,8 @@ public class DQNAgent {
         }
     }
 
-    public void update(INDArray state, int action, double reward, INDArray nextState, boolean done, INDArray mask) throws Exception {
-        replayBuffer.add(state, action, reward, nextState, done, mask);
+    public void update(INDArray state, double reward, INDArray nextState, boolean done) throws Exception {
+        replayBuffer.add(state, reward, nextState, done);
         if (replayBuffer.size() < this.batchSize) return;
         syncQnet();
 
@@ -130,12 +130,12 @@ public class DQNAgent {
         int address = 0;
         for(int index =0; index<this.batchSize; index++) {
             Memory it = memories.get(index);
-            //double end = 0.0;
-            //if(it.done)end = 1.0;
+            double end = 0.0;
+            if(it.done)end = 1.0;
             //INDArray outOfQnet = this.qnet.model.output(it.state);
             INDArray outOfQTarget = this.qnetTarget.output(it.nextState);
 
-            double[] newOut = new double[]{this.gamma * outOfQTarget.toDoubleVector()[0]};
+            double[] newOut = new double[]{(1.0 - end)*this.gamma * outOfQTarget.toDoubleVector()[0] + it.reward};
             INDArray newOfQnet = Nd4j.create(newOut, new int[]{1,1});
 
             input.putRow(address, it.state);

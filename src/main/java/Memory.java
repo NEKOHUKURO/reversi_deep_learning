@@ -7,16 +7,13 @@ public class Memory{
     INDArray nextState = null;
     boolean done = false;
     int id;
-    INDArray mask;
 
 
     Memory(
             INDArray state,
-            int action,
             double reward,
             INDArray nextState,
-            boolean done,
-            INDArray mask
+            boolean done
     ) {
         this.state = state;
         this.action = action;
@@ -24,6 +21,5 @@ public class Memory{
         this.nextState = nextState;
         this.done = done;
         this.id = ReplayBuffer.inc;
-        this.mask = mask;
     }
 }

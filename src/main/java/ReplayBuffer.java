@@ -16,18 +16,16 @@ public class ReplayBuffer{
 
     public void add(
         INDArray state,
-        int action,
         double reward,
         INDArray nextState,
-        boolean done,
-        INDArray mask
+        boolean done
     ) {
         if (this.buffer.size() >= this.bufferMaxSize) {
             this.buffer.remove(0);
         }
         ReplayBuffer.inc++;
         this.buffer.add(
-            new Memory(state, action, reward, nextState, done, mask)
+            new Memory(state, reward, nextState, done)
         );
     }
 

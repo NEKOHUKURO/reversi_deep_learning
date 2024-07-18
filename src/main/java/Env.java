@@ -22,14 +22,15 @@ public class Env{
         }
 
         int winner = osero.winner();
-        INDArray twoStatus = getMaxBord(0);
+        INDArray prevState = getMaxBord(0);
+        INDArray nextState = getMaxBord(0);
 
         if (winner == 0){
-            return new Memory(twoStatus, action, 10.0, null, true, null);
+            return new Memory(prevState,10.0, nextState, true);
         } else if(winner == 1) {
-            return new Memory(twoStatus, action, -10.0, null, true, null);
+            return new Memory(prevState, -10.0, nextState, true);
         } else if (winner == 3){
-            return new Memory(twoStatus, action, 0, null, true, null);
+            return new Memory(prevState, 0, nextState, true);
         }
         
         if (human){
@@ -37,8 +38,7 @@ public class Env{
             Scanner scan = new Scanner(System.in);
             for (int i=0;i<8;i++){
                 for (int j=0;j<8;j++){
-                    if(osero.can_put(1, i, j))
-                    System.out.print("("+i+","+j+")");
+                    if(osero.can_put(1, i, j)) System.out.print("("+i+","+j+")");
                 }
             }
             System.out.println();
@@ -63,17 +63,15 @@ public class Env{
 
         winner = osero.winner();
 
-        INDArray second = getMaxBord(0);
         if (winner == 0){
-            return new Memory(second,  action, 10.0, null, true, null);
+            return new Memory(prevState, 10.0, nextState, true);
         } else if(winner == 1) {
-            return new Memory(second, action, -10.0, null, true, null);
+            return new Memory(prevState, -10.0, nextState, true);
         } else if (winner == 3){
-            return new Memory(second, action, 0, null, true, null);
+            return new Memory(prevState, 0, nextState, true);
         }
 
-        INDArray threeStatus = getMaxBord(0);
-        return new Memory(threeStatus, action, 0.0, null, false, null);
+        return new Memory(prevState, 0.0, nextState, false);
     }
 
     public Memory reset() {
@@ -87,7 +85,7 @@ public class Env{
             }
 
         INDArray firstStatus = Nd4j.create(oneStatus, new int[]{1, 8*8*2});
-        return new Memory(firstStatus, -1, 0.0, null, false, null);
+        return new Memory(firstStatus, 0.0, null, false);
     }
     public INDArray getMaxBord(int putter){
         float[] enemyStatus = new float[8 * 8 * 2];

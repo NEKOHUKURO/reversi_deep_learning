@@ -5,28 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2c86933-f64d-4570-8876-2a52a7868223" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osero.dl4j" beforeDir="false" afterPath="$PROJECT_DIR$/osero.dl4j" afterDir="false" />
+<<<<<<< Updated upstream
+=======
       <change beforePath="$PROJECT_DIR$/out/production/classes/DQNAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/DQNAgent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Env.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Env.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Memory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Memory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/PlayWithYou.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/PlayWithYou.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/QNet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/QNet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/DQNAgent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/Env.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/Memory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/OSERO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/PlayWithYou.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/QNet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/ReplayBuffer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/build/classes/java/main/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ReplayBuffer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ReplayBuffer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DQNAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DQNAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Env.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Env.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Memory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PlayWithYou.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PlayWithYou.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QNet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ReplayBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ReplayBuffer.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,10 +67,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build src.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.reversi_deep_learning [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;establishe__borad&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/oicat/reversi_deep_learning/src&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.53103447&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main (1).executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.PlayWithYou.executor": "Run",
     "Gradle.Build src.executor": "Run",
     "Gradle.reversi_deep_learning [:Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -86,8 +98,9 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.53103447",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+>>>>>>> Stashed changes
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -103,9 +116,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PlayWithYou" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PlayWithYou" />
+      <module name="org.example.reversi_deep_learning.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.PlayWithYou" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

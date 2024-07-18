@@ -11,6 +11,7 @@ public class Main {
         boolean done;
         Random rand = new Random();
         boolean first = true;
+
         for (int episode =0; episode < episodes; episode++){
             first = !first;
             System.out.println("episode : "+ episode);
@@ -20,6 +21,9 @@ public class Main {
             double reward=0;
             int action = 0;
             double a =0;
+            INDArray prev_state = null;
+            INDArray next_state = null;
+            INDArray prev_state_tmp = null;
 
             if (first) {
                 int aiAction = agent.getAction(env.getMaxBord(1), 0.0001, env.osero, 1);
@@ -29,12 +33,10 @@ public class Main {
             for (int i =0 ;i< episode%4; i++) {
                 randMap[rand.nextInt(31)] = true;
             }
+
             while(!done){
                 ddd++;
                 INDArray state = env.getMaxBord(0);
-                //double ep = episode;
-                //double epi = 1.0/(Math.max(1.0, ep/1000));
-                //a = Math.max(epi, 1.0/40);
                 boolean putAble = false;
                 for (int i=0;i<64;i++){
                     if(env.osero.can_put(0,i/8, i%8)) {
@@ -51,27 +53,14 @@ public class Main {
                 }
                 env1.osero.bord_put(0, action/8, action%8);
 
-                //env.osero.showBoard(0);
-                //System.out.println("action : "+act + " x:"+act%8 +" y:"+act/8);
-                for (int i=0;i<64;i++){
-                    if(env.osero.can_put(0,i/8, i%8)) {
-                        putAble = true;
-                    }
-                }
-
                 Memory arr = env.step(action, false, agent);
-                INDArray next_state = arr.state;
                 reward = arr.reward;
                 done = arr.done;
+                next_state = arr.nextState;
+                prev_state = prev_state_tmp;
+                prev_state_tmp = arr.state;
 
-                double[] mask = new double[64];
-                for (int i=0;i<64;i++){
-                    if(!env.osero.can_put(0,i/8, i%8)) {
-                        mask[i] = 1;
-                    }
-                }
-                agent.update(env1.getMaxBord(0), action, reward, next_state, done, Nd4j.create(mask, new int[]{1, 64}));
-                //state = next_state;
+                if (prev_state != null) agent.update(prev_state, reward, next_state, done);
             }
             System.out.println("a is : "+ a);
             System.out.println("can continue :"+ddd + "  reward :"+reward + " :action : "+action);

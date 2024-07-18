@@ -41,6 +41,7 @@ public class PlayWithYou {
                 for (int i = 0; i < 64; i++) {
                     if (env.osero.can_put(0, i / 8, i % 8)) {
                         action = agent.getAction(e, 10, env.osero, 0);
+                        break;
                     }
                 }
                 //env.osero.showBoard(0);
