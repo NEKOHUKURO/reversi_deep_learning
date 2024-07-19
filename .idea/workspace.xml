@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2c86933-f64d-4570-8876-2a52a7868223" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DQNAgent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Env.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Memory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/OSERO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/PlayWithYou.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/QNet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ReplayBuffer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/DQNAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/DQNAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Env.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Env.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/OSERO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/OSERO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/PlayWithYou.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/PlayWithYou.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/QNet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/QNet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PlayWithYou.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PlayWithYou.java" afterDir="false" />
-    </list>
+    <list default="true" id="b2c86933-f64d-4570-8876-2a52a7868223" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
