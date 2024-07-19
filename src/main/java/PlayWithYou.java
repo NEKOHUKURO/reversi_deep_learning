@@ -1,12 +1,15 @@
+import org.apache.log4j.BasicConfigurator;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import java.io.File;
+import java.io.IOException;
 import java.util.Random;
 
 public class PlayWithYou {
     public static void main(String[] arg) throws Exception {
         Env env = new Env();
+        BasicConfigurator.configure();
         boolean done = false;
         DQNAgent agent = new DQNAgent(false);
 
@@ -25,7 +28,7 @@ public class PlayWithYou {
         int episodes = 5000;
 
         for (int episode =0; episode < episodes; episode++) {
-            System.out.println("episode : "+ episode);
+            System.out.println("episodesssssssssssssss : "+ episode);
             Memory memo = env.reset();
             first=true;
             done = false;
@@ -43,12 +46,6 @@ public class PlayWithYou {
                         action = agent.getAction(e, 10, env.osero, 0);
                     }
                 }
-                INDArray oo = agent.qnet.model.output(e);
-                System.out.println(oo);
-                System.out.println(oo.argMax(1));
-               // env.osero.showBoard(0);
-                //env.osero.showBoard(0);
-                //System.out.println("action : "+act + " x:"+act%8 +" y:"+act/8);
 
                 Memory arr = env.step(action, false, agent);
                 INDArray next_state = arr.state;
@@ -61,10 +58,8 @@ public class PlayWithYou {
                 }
                 INDArray state = next_state;
             }
-            env.osero.showBoard(0);
 
             first = !first;
-            System.out.println("a is : " + a);
             System.out.println("can continue :" + ddd + "  reward :" + reward + " :action : " + action);
         }
         System.out.println("youLose: "+ youLose);

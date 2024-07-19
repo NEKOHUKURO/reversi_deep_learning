@@ -32,9 +32,6 @@ public class Main {
             while(!done){
                 ddd++;
                 INDArray state = env.getMaxBord(0);
-                //double ep = episode;
-                //double epi = 1.0/(Math.max(1.0, ep/1000));
-                //a = Math.max(epi, 1.0/40);
                 boolean putAble = false;
                 for (int i=0;i<64;i++){
                     if(env.osero.can_put(0,i/8, i%8)) {
@@ -44,8 +41,6 @@ public class Main {
 
                 a = ddd>30? 1.0/30: randMap[ddd] ? 1:-1;
                 if(putAble) action = agent.getAction(state, a, env.osero, 0);
-                //env.osero.showBoard(0);
-                //System.out.println("action : "+act + " x:"+act%8 +" y:"+act/8);
 
                 Memory arr = env.step(action, false, agent);
                 INDArray next_state = arr.state;

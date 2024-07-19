@@ -1,10 +1,12 @@
+
+import org.nd4j.common.primitives.Pair;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
-
 import java.util.Scanner;
 
+
 public class Env{
-    public OSERO osero;
+    OSERO osero;
     public Env() {
         osero = new OSERO();
     }
