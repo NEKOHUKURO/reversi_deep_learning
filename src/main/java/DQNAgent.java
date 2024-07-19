@@ -1,4 +1,3 @@
-
 import org.deeplearning4j.nn.gradient.Gradient;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.nn.workspace.LayerWorkspaceMgr;
@@ -6,7 +5,6 @@ import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.common.primitives.Pair;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,14 +15,14 @@ public class DQNAgent {
     int batchSize = 1000;
     int bufferMaxSize = 6000;
 
-    public QNet qnet;
+    QNet qnet;
     MultiLayerNetwork qnetTarget;
     Random random;
     double epsilon = 0.1;
     int actionSize = 64;
     double gamma = 0.98;
     
-    public DQNAgent(boolean sync) throws IOException {
+    DQNAgent(boolean sync) throws IOException {
         replayBuffer = new ReplayBuffer(this.batchSize, this.bufferMaxSize);
         qnet = new QNet();
         random = new Random();
@@ -32,15 +30,10 @@ public class DQNAgent {
     }
 
     public void syncQnet() throws IOException {
-        System.out.println("suguniha");
         File file1 = new File("osero.dl4j");
         this.qnet.model.save(file1, true);
-       // System.out.println("qnet : "+this.qnet.model.output(Nd4j.create(new double[][]{{1,0,0,0,0,0,0,0,0,0,0}})));
-       // System.out.println("file : "+file1.getAbsolutePath());
         File file = new File("osero.dl4j");
         this.qnetTarget = ModelSerializer.restoreMultiLayerNetwork(file, true);
-       // System.out.println("terg : "+this.qnetTarget.output(Nd4j.create(new double[][]{{1,0,0,0,0,0,0,0,0,0,0}})));
-//        this.qnetTarget.model = ComputationGraph.load(new File("aa.txt"), true);
     }
 
     public int getAction(INDArray input, double epsilon, OSERO osero, int putter) throws Exception {
@@ -83,7 +76,6 @@ public class DQNAgent {
                         }
                     }
                 }
-                //System.out.println(Nd4j.create(minArray, new int[]{1, 64}));
                 return maxY*8 + (7-maxX);
             } else {
                 int maxX=-1;

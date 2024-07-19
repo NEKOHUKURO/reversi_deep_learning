@@ -46,6 +46,7 @@ public class Main {
 
                 a = ddd>30? 1.0/30: randMap[ddd] ? 1:-1;
                 if(putAble) action = agent.getAction(state, a, env.osero, 0);
+
                 Env env1 = new Env();
                 for (int i = 0; i < 64; i++) {
                     env1.osero.bord_0[i/8][i%8] = env.osero.bord_0[i/8][i%8];

@@ -1,10 +1,11 @@
 import org.nd4j.common.primitives.Pair;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class OSERO {
-    public boolean[][] bord_0 = new boolean[8][8];
-    public boolean[][] bord_1 = new boolean[8][8];
+    boolean[][] bord_0 = new boolean[8][8];
+    boolean[][] bord_1 = new boolean[8][8];
     double RO_RE[][][] = new double[8][3][3];
     double RO_RE_1[][][] = new double[8][3][3];
 
@@ -30,7 +31,7 @@ public class OSERO {
         }
     }
 
-    public OSERO() {
+    OSERO() {
         bord_int();
         double RO[][][] = { { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } },
                 { { 0, -1, 7 }, { 1, 0, 0 }, { 0, 0, 1 } },
@@ -124,7 +125,7 @@ public class OSERO {
      * y：縦方向 0~7
      * x：横方向 0~7
      */
-    public boolean can_put(int putter, int y, int x) {
+    boolean can_put(int putter, int y, int x) {
         if (bord_0[y][x] || bord_1[y][x])
             return false;
         boolean atck[][];
@@ -242,7 +243,7 @@ public class OSERO {
         return false;
     }
 
-    public boolean bord_put(int putter, int y, int x) throws Exception {
+    boolean bord_put(int putter, int y, int x) throws Exception {
         boolean atck[][];
         boolean prot[][];
         if (putter == 0) {
@@ -530,7 +531,7 @@ public class OSERO {
         return null;
     }
 
-    public void showBoard(int utite) throws Exception {
+    void showBoard(int utite) throws Exception {
         Pair<double[][], double[][]> pair = get_bord(utite);
         double N[][] = pair.getFirst();
         int x, y;

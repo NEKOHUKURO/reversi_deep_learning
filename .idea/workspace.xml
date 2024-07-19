@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b2c86933-f64d-4570-8876-2a52a7868223" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osero.dl4j" beforeDir="false" afterPath="$PROJECT_DIR$/osero.dl4j" afterDir="false" />
@@ -23,10 +24,17 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/ReplayBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ReplayBuffer.java" afterDir="false" />
 >>>>>>> Stashed changes
     </list>
+=======
+    <list default="true" id="b2c86933-f64d-4570-8876-2a52a7868223" name="Changes" comment="" />
+>>>>>>> main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -45,6 +53,31 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="reversi_deep_learning" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="reversi_deep_learning" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="reversi_deep_learning" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
             </expand>
             <select />
@@ -88,6 +121,7 @@
     "Application.Main (1).executor": "Run",
     "Application.Main.executor": "Run",
     "Application.PlayWithYou.executor": "Run",
+<<<<<<< HEAD
     "Gradle.Build src.executor": "Run",
     "Gradle.reversi_deep_learning [:Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -109,6 +143,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+=======
+    "Gradle.reversi_deep_learning [:Main.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/oidai/reversi_deep_learning",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.53103447",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.PlayWithYou">
+>>>>>>> main
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="reversi_deep_learning.main" />
@@ -118,14 +167,21 @@
     </configuration>
     <configuration name="PlayWithYou" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PlayWithYou" />
+<<<<<<< HEAD
       <module name="org.example.reversi_deep_learning.main" />
+=======
+      <module name="reversi_deep_learning.main" />
+>>>>>>> main
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Application.Main (1)" />
+=======
+>>>>>>> main
         <item itemvalue="Application.PlayWithYou" />
         <item itemvalue="Application.Main" />
       </list>
@@ -148,5 +204,8 @@
       <updated>1720973082643</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/reversi_deep_learning$PlayWithYou.ic" NAME="PlayWithYou Coverage Results" MODIFIED="1721399308199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

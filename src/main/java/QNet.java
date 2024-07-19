@@ -4,11 +4,13 @@ import org.deeplearning4j.nn.conf.layers.DenseLayer;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.nn.weights.WeightInit;
 import org.deeplearning4j.optimize.listeners.ScoreIterationListener;
+import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.learning.config.Adam;
 
+import java.io.File;
 import java.io.IOException;
 
 public class QNet{
@@ -19,13 +21,12 @@ public class QNet{
     int numEpochs = 15; // number of epochs to perform
     double rate = 0.00005; // learning rate
     MultiLayerConfiguration conf;
-    public MultiLayerNetwork model;
+    MultiLayerNetwork model;
     //Get the DataSetIterators:
 
 
     QNet() throws IOException {
         System.out.println("Qnet ins");
-
         conf = new NeuralNetConfiguration.Builder()
                 .seed(rngSeed)
                 .weightInit(WeightInit.NORMAL)
