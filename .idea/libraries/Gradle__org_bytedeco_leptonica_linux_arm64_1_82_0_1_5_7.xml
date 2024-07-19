@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.bytedeco:leptonica:linux-arm64:1.82.0-1.5.7" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.bytedeco" artifactId="leptonica" version="1.82.0-1.5.7" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.bytedeco/leptonica/1.82.0-1.5.7/d61e8f2419ac01978d6f69d17aba40a8ddc75f2e/leptonica-1.82.0-1.5.7-linux-arm64.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

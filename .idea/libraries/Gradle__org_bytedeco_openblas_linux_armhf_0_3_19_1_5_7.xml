@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.bytedeco:openblas:linux-armhf:0.3.19-1.5.7" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.bytedeco" artifactId="openblas" version="0.3.19-1.5.7" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.bytedeco/openblas/0.3.19-1.5.7/74b573a94417ad6051cd73784b92249dc3f71f40/openblas-0.3.19-1.5.7-linux-armhf.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

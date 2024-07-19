@@ -5,20 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2c86933-f64d-4570-8876-2a52a7868223" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osero.dl4j" beforeDir="false" afterPath="$PROJECT_DIR$/osero.dl4j" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DQNAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DQNAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Env.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Env.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OSERO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OSERO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DQNAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Env.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Memory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/OSERO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/PlayWithYou.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/QNet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ReplayBuffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/DQNAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/DQNAgent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Env.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Env.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/OSERO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/OSERO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/PlayWithYou.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/PlayWithYou.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/QNet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/QNet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PlayWithYou.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PlayWithYou.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QNet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -67,13 +83,14 @@
     "Application.PlayWithYou.executor": "Run",
     "Gradle.reversi_deep_learning [:Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/oidai/reversi_deep_learning",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.53103447",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
 }]]></component>
   <component name="RunManager" selected="Application.PlayWithYou">
@@ -115,5 +132,8 @@
       <updated>1720973082643</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/reversi_deep_learning$PlayWithYou.ic" NAME="PlayWithYou Coverage Results" MODIFIED="1721399308199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

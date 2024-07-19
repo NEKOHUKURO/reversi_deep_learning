@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.bytedeco:tesseract:5.0.1-1.5.7" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.bytedeco" artifactId="tesseract" version="5.0.1-1.5.7" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.bytedeco/tesseract/5.0.1-1.5.7/6196e1edc1f6cdc4830d35506f9e36001b96ecb8/tesseract-5.0.1-1.5.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

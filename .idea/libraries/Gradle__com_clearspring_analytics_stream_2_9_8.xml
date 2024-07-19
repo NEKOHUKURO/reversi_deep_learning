@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.clearspring.analytics:stream:2.9.8" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.clearspring.analytics" artifactId="stream" version="2.9.8" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.clearspring.analytics/stream/2.9.8/5ef966e6c758c508c9076928d380108ae3f9843c/stream-2.9.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

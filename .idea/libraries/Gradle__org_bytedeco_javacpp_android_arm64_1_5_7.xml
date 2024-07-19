@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.bytedeco:javacpp:android-arm64:1.5.7" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.bytedeco" artifactId="javacpp" version="1.5.7" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.bytedeco/javacpp/1.5.7/742cc9e29ea1cdfa37a620d10ba4e6aa34267e2e/javacpp-1.5.7-android-arm64.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

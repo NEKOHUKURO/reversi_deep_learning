@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.twelvemonkeys.imageio:imageio-bmp:3.1.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.twelvemonkeys.imageio" artifactId="imageio-bmp" version="3.1.1" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.twelvemonkeys.imageio/imageio-bmp/3.1.1/3b6f82168a6f76899e33a8a9f4058d0e127df30e/imageio-bmp-3.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

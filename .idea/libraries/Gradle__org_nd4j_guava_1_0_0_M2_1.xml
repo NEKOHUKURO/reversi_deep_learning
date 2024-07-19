@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.nd4j:guava:1.0.0-M2.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.nd4j" artifactId="guava" version="1.0.0-M2.1" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.nd4j/guava/1.0.0-M2.1/9dc687d6fd2fb2ea25beeae58949844132e50c8a/guava-1.0.0-M2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

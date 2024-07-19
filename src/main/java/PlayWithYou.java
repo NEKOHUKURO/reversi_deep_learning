@@ -28,7 +28,7 @@ public class PlayWithYou {
         int episodes = 5000;
 
         for (int episode =0; episode < episodes; episode++) {
-            System.out.println("episodesssssssssssssss : "+ episode);
+            System.out.println("episodess : "+ episode);
             Memory memo = env.reset();
             first=true;
             done = false;
