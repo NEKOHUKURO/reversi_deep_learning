@@ -6,7 +6,7 @@ import java.io.File;
 import java.util.Random;
 
 public class PlayWithYou {
-    public static void main(String[] arg) throws Exception {
+    public static void main(String[] args) throws Exception {
         Env env = new Env();
         BasicConfigurator.configure();
         boolean done = false;
